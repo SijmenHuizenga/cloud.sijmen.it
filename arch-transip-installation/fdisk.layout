@@ -1,0 +1,10 @@
+label: dos
+label-id: 0xab529401
+device: /dev/vda
+unit: sectors
+
+/dev/vda1 : start=        2048, size=      204800, type=c
+/dev/vda2 : start=      206848, size=   314365952, type=5
+/dev/vda5 : start=      208896, size=   104857600, type=83
+/dev/vda6 : start=   105068544, size=   188743680, type=83
+/dev/vda7 : start=   293814272, size=    20758528, type=82
