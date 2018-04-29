@@ -15,5 +15,5 @@ var TransipInstallOs = cli.Command{
 		transip.PartitionAction,
 		transip.Mount,
 		actions.InstallOS,
-	}),
+	}, actions.SudoBefore),
 }

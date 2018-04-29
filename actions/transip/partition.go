@@ -9,7 +9,7 @@ var PartitionAction = actions.Action {
 	"partition",
 	"Partitioning...",
 	func() error {
-		e := util.CopyResourceToDisk("transip-fdisk.layout")
+		e := util.CopyResourceToDisk("transip-fdisk.layout", "transip-fdisk.layout")
 		if e != nil {return e}
 
 		e = util.Cmds(

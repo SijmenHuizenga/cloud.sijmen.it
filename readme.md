@@ -22,17 +22,3 @@ You can also run induvidual steps of the installation process. Look at the resul
 ```
  $ sijmeninstaller transip-install-os --help
 ```
-
-## Build this thing
-
-Make a binary:
-```
- $ cd util && rice embed-go && cd ..
- $ go install
-```
-Resulting binary found in `~/go/bin`
-
-Compress binary:
-```
- $ upx --brute ~/go/bin/sijmeninstaller
-```

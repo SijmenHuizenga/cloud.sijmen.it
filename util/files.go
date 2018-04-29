@@ -8,14 +8,15 @@ import (
 
 const zzf = 0644
 
-func CopyResourceToDisk(filename string) error {
+func CopyResourceToDisk(resourcename string, targetname string) error {
+	cmdPrinter.Println("[copying resource "+resourcename+" to disk on "+targetname+"]")
 	resources, e := rice.FindBox("res")
 	if e != nil { return e }
 
-	fidisklayout, e := resources.String(filename)
+	str, e := resources.String(resourcename)
 	if e != nil { return e }
 
-	return ioutil.WriteFile(filename, []byte(fidisklayout), zzf)
+	return ioutil.WriteFile(targetname, []byte(str), zzf)
 }
 
 func DeleteFileOnDisk(filename string) error {
