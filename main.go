@@ -20,6 +20,8 @@ func main() {
 	app.Commands = []cli.Command{
 		commands.TransipInstallOs,
 		commands.TransipSetup,
+		commands.InstallSaltMinion,
+		commands.InstallSaltMaster,
 		commands.ExtraTools,
 	}
 
