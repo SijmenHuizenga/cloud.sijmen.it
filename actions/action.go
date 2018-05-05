@@ -37,7 +37,7 @@ func mkRunAllCommand(acts []Action, before func(_ *cli.Context) error) cli.Comma
 		Before: before,
 		Action: func(c *cli.Context) error {
 			for index, element := range acts {
-				util.Title(fmt.Sprintf("[%d/%d] %s...\n", index, len(acts), element.Description))
+				util.Title(fmt.Sprintf("[%d/%d] %s...\n", index+1, len(acts), element.Description))
 				e := element.Runner()
 				if e != nil {
 					return e

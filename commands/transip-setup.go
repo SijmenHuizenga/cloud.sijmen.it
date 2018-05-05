@@ -16,6 +16,7 @@ var TransipSetup = cli.Command{
 		actions.Timezone,
 		actions.Locale,
 		actions.Hostname,
+		transip.HostFile,
 		actions.CreateUserSijmen,
 		actions.SetupSSH,
 	}, actions.SudoBefore),

@@ -6,7 +6,7 @@ var InstallBaseDevel = Action {
 	"tooling",
 	"installs base-devel",
 	func() error {
-		return util.Cmd("sudo pacman --noconfirm -Sy base-devel")
+		return util.Cmd("sudo pacman --noconfirm -Sy base-devel git")
 	},
 }
 

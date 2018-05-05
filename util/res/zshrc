@@ -1,19 +1,23 @@
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+source /usr/share/zsh/share/antigen.zsh
 
-alias ls='ls --color=auto'
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle command-not-found
+antigen bundle history
+antigen bundle sudo
+antigen bundle common-aliases
+
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="agnoster"
+antigen theme agnoster
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(
-  git
-)
-
-source $ZSH/oh-my-zsh.sh
+antigen apply
 
 export LANG=en_US.UTF-8
+export VISUAL=nano
+export EDITOR="$VISUAL"
 

@@ -1,0 +1,39 @@
+#
+# /etc/hosts: static lookup table for host names
+#
+
+#<ip-address>	<hostname>
+::1             localhost
+127.0.0.1       localhost
+
+192.168.1.1     salt
+
+192.168.1.1     masterA
+192.168.1.2     masterB
+192.168.1.3     masterC
+192.168.1.4     masterD
+192.168.1.5     masterE
+192.168.1.6     masterF
+
+192.168.2.1     app1
+192.168.2.2     app2
+192.168.2.3     app3
+192.168.2.4     app4
+192.168.2.5     app5
+192.168.2.6     app6
+192.168.2.7     app7
+192.168.2.8     app8
+192.168.2.9     app9
+192.168.2.10    app10
+192.168.2.11    app11
+192.168.2.12    app12
+192.168.2.13    app13
+192.168.2.14    app14
+192.168.2.15    app15
+192.168.2.16    app16
+192.168.2.17    app17
+192.168.2.18    app18
+192.168.2.19    app19
+192.168.2.20    app20
+
+# End of file

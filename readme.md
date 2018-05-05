@@ -16,7 +16,15 @@ Now, BEFORE REBOOT, use `arch-chroot /mnt` to get into the new system and run th
  $ ./sijmeninstaller transip-setup all |& tee -a installer-log.txt
 ```
 
-Finished!
+Finished! Now reboot and ssh into the machine with the `sijmen` account.
+
+Next: Tooling!
+
+```
+ $ ./sijmeninstaller extra-tools all
+```
+
+
 
 You can also run induvidual steps of the installation process. Look at the result of the following to get the exact commands:
 ```
