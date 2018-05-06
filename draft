@@ -1,0 +1,16 @@
+mkdir /srv/salt
+sudo -R sijmen:root /srv/salt
+
+mkdir /srv/formulas
+cd /srv/formulas
+git clone https://github.com/salt-formulas/salt-formula-docker.git
+
+
+
+/etc/salt/master
+```
+file_roots:
+  base:
+    - /srv/salt/
+    - /srv/formulas/salt-formula-docker
+```

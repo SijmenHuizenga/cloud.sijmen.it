@@ -22,6 +22,9 @@ var CreateUserSijmen = Action {
 			"useradd -m " + username,
 			"echo " + username + `:` + password + " | chpasswd",
 			"usermod -a -G sudo " + username,
+
+			//disable sudo login
+			"passwd -l root",
 		)
 		if e != nil { return e }
 
