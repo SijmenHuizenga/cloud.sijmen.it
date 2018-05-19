@@ -55,6 +55,13 @@ func SudoBefore(c *cli.Context) error {
 	return ConfirmBefore(c)
 }
 
+func NotSudoBefore(c *cli.Context) error {
+	if util.IsSudo() {
+		return errors.New("this command must not be run as root")
+	}
+	return ConfirmBefore(c)
+}
+
 func ConfirmBefore(_ *cli.Context) error {
 	util.Title("Hi Sijmen! This script might do scary things!!")
 	if !util.Confirm("Are you sure you want to continue? Did you type the correct command?") {

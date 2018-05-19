@@ -12,5 +12,5 @@ var ExtraTools = cli.Command{
 		actions.InstallBaseDevel,
 		actions.InstallAurman,
 		actions.InstallZSH,
-	}, actions.ConfirmBefore),
+	}, actions.NotSudoBefore),
 }
