@@ -14,9 +14,22 @@ var PrivateNetwork = actions.Action {
 			return errors.New("Ip must not be null")
 		}
 
+		serviceFilePath := "/etc/systemd/system/transip-privatenetwork.service"
+		exeFilePath := "/opt/transip-privatenetwork/setup.sh"
+
+		e := util.CopyResourceToDisk("transip-privatenetwork.service", serviceFilePath)
+		if e != nil {return e}
+
+		e = util.CopyResourceToDisk("transip-privatenetwork.sh", exeFilePath)
+		if e != nil {return e}
+
+		e = util.ReplaceInFile("THEIP", ip, exeFilePath)
+		if e != nil {return e}
+
 		return util.Cmds(
-			"sudo ip addr add "+ip+"/255.255.0.0 dev ens7",
-			"sudo ip link set ens7 up",
+			"chmod +x "+ exeFilePath,
+			"systemctl enable transip-privatenetwork.service",
+			"systemctl start transip-privatenetwork.service",
 		)
 	},
 }

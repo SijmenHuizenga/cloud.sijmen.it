@@ -1,0 +1,9 @@
+[Unit]
+Description=Setup the ip address and device linking for the private network on a transip machine
+
+[Service]
+Type=oneshot
+ExecStart=/opt/transip-privatenetwork/setup.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -12,7 +12,7 @@ func main() {
 	app := cli.NewApp()
 	app.Usage = "Use this command to install new dektops or vps with everything"
 	app.EnableBashCompletion = true
-	app.Version = "v1.1"
+	app.Version = "v1.3"
 
 	log.SetFlags(0)
 	log.SetOutput(util.Errwriter{})
